@@ -12,7 +12,7 @@ from config import BaseConfig
 
 
 def db_config(database_uri=None):
-    """ Extracting the postgre uri and return the database login information.
+    """ Extract the postgres uri and return the database login information.
     Param Description: 
     :param database_uri: database Configuration uri
     :return: database login information
