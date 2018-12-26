@@ -4,7 +4,7 @@ Is a platform where people can ask questions and provide answers.
 ## Overview
 StackOverflow-lite is a platform where people can ask questions and provide answers.
 
-## Required Features
+## StackOverflow-lite Required Features
     - Users can create an account and log in.
     - Users can post questions.
     - Users can delete the questions they post
