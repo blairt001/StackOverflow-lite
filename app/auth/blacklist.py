@@ -1,5 +1,5 @@
 
-"""  MOdel auth : blacklisting """
+"""  Model auth : blacklisting """
 #Author : Tony Okoth
 
 import psycopg2
