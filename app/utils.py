@@ -111,7 +111,7 @@ def decode_auth_token(auth_token):
 
 
 def valid_email(email):
-    """  Validate email """
+    """  Validate email address """
     try:
         if email.count('@') > 1:
             return False
