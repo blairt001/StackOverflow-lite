@@ -132,7 +132,7 @@ class Answer:
 
         except Exception as e:
             print(e)
-            response['errors'] = 'Please provide correct answer and question id'
+            response['errors'] = 'Please provide the correct answer and question id'
             return response
 
     def update_accept_field(self):
