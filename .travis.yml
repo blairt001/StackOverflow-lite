@@ -1,7 +1,8 @@
+#Language specification
 language: python
 python:
   - "3.6.7"
-# command to install dependencies
+# Installing dependencies
 services:
   - postgresql
 install: 
@@ -11,7 +12,7 @@ before_script:
   - psql -c "CREATE DATABASE test_stacklite;" -U postgres
   - psql -c "CREATE DATABASE stacklite;" -U postgres
   - psql -c "CREATE USER blairtony WITH PASSWORD '1234';" -U postgres
-# command to run tests
+# Running tests
 script: 
   - py.test --cov=app -v
 after_success:
