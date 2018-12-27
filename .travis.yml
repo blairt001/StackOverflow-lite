@@ -6,6 +6,7 @@ python:
 services:
   - postgresql
 install: 
+  - pip3 freeze > requirements.txt
   - pip3 install -r requirements.txt
   - pip3 install coveralls
 before_script:
