@@ -7,7 +7,6 @@ from .initial1 import migrations
 from config import BaseConfig
 from ..utils import db_config
 
-#Database model
 class Database:
     def __init__(self):
         self.config = db_config()
