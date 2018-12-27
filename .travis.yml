@@ -2,6 +2,13 @@
 language: python
 python:
   - "3.6.7"
+#branch to run on
+branches:
+    only:
+      - develop
+env: 
+    - APP_SETTINGS='testing'
+    - SECRET = 'T9Y1zdmIKCzUovTEFGYgaRV'
 # Installing dependencies
 services:
   - postgresql
