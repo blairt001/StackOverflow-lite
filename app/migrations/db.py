@@ -31,7 +31,7 @@ class Database:
             print(" * Database {} does not exists".format(self.database))
         con.close()
 
-    def migrate_test_db(self):
+    def migrate_test_stacklite(self):
         """ Create test database and schema """
         os.environ['APP_SETTINGS'] = 'TESTING'
         con = psycopg2.connect(**self.config)
