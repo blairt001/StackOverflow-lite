@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "python.pythonPath": "/usr/bin/python3.6"
+=======
+    "python.pythonPath": "venv/bin/python"
+>>>>>>> ft-unittests-modules-#162855208
 }
