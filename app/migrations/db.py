@@ -7,7 +7,7 @@ from .initial1 import migrations
 from config import BaseConfig
 from ..utils import db_config
 
-
+#Database model
 class Database:
     def __init__(self):
         self.config = db_config()
@@ -30,7 +30,8 @@ class Database:
         else:
             print(" * Database {} does not exists".format(self.database))
         con.close()
-
+    
+    #migrate the test database
     def migrate_test_stacklite(self):
         """ Create test database and schema """
         os.environ['APP_SETTINGS'] = 'TESTING'
