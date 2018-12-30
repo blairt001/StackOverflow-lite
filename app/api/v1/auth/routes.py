@@ -11,7 +11,7 @@ auth_blueprint = Blueprint('auth', __name__)
 
 
 class RegisterAPI(MethodView):
-    """ User Signup API Resource """
+    """ Defining the sign-up resource """
     def post(self):
         # get the post data
         data = request.get_json(force=True)
@@ -87,7 +87,7 @@ class LoginAPI(MethodView):
 
 
 class UserListAPI(MethodView):
-    """ User List Api Resource """
+    """ Getting the users resource """
     @jwt_required
     def get(self):
         user_id = session.get('user_id')
@@ -105,9 +105,9 @@ class UserListAPI(MethodView):
 
 
 class LogoutAPI(MethodView):
-    """ Logout Resource """
+    """ API endpoint for logout """
     def post(self):
-        # get auth token
+        # get the authorization token
         try:
             token = request.headers.get('Authorization').split(' ')[-1]
             blacklisted = Blacklist({'token': token}).blacklist_token()
@@ -128,31 +128,32 @@ class LogoutAPI(MethodView):
             }
             return make_response(jsonify(response_object)), 401
 
-
-# Define the API resources
+# Defining the API resources
 registration_view = RegisterAPI.as_view('register_api')
 login_view = LoginAPI.as_view('login_api')
 user_view = UserListAPI.as_view('user_api')
 logout_view = LogoutAPI.as_view('logout_api')
 
-# Add Rules for API Endpoints
+# Adding Rules for API Endpoints, POST data for user registration
 auth_blueprint.add_url_rule(
     '/api/v1/auth/signup',
     view_func=registration_view,
     methods=['POST']
 )
 
-# Add Rules for API Endpoints
+# Adding Rules for API Endpoints, delete a user
 auth_blueprint.add_url_rule(
     '/api/v1/auth/delete',
     view_func=registration_view,
     methods=['DELETE']
 )
+# Adding Rules for API Endpoints, user login
 auth_blueprint.add_url_rule(
     '/api/v1/auth/login',
     view_func=login_view,
     methods=['POST']
 )
+# Adding Rules for API Endpoints, get all users
 auth_blueprint.add_url_rule(
     '/api/v1/auth/users',
     view_func=user_view,
@@ -163,6 +164,7 @@ auth_blueprint.add_url_rule(
     view_func=user_view,
     methods=['GET']
 )
+# Adding Rules for API Endpoints, user logout
 auth_blueprint.add_url_rule(
     '/api/v1/auth/logout',
     view_func=logout_view,
