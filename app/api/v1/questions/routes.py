@@ -142,7 +142,7 @@ question_blueprint.add_url_rule(
     methods=['PUT', 'GET']
 )
 
-# Add Rules for API Endpoints, for fetching question
+# Add Rules for API Endpoints, for getting all questions from the database
 question_blueprint.add_url_rule(
     '/api/v1/questions/',
     view_func=list_view,
