@@ -135,7 +135,7 @@ question_blueprint.add_url_rule(
     methods=['DELETE']
 )
 
-# Add Rules for API Endpoints, for updating a question
+# Add Rules for API Endpoints, for updating a question, takes json request
 question_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>',
     view_func=create_view,
