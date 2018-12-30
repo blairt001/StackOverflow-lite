@@ -119,7 +119,7 @@ answers_blueprint.add_url_rule(
     view_func=list_view,
     methods=['GET']
 )
-
+#Allows a user to get a specific answer using the answer id
 answers_blueprint.add_url_rule(
     '/api/v1/questions/answers/<string:answer_id>',
     view_func=list_view,
