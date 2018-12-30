@@ -107,7 +107,7 @@ class CreateQuestionAPIView(MethodView):
 
 
 class QuestionsListAPIView(MethodView):
-    """ List API Resource """
+    """ List API Resource for questions """
     def get(self):
         data = dict()
         data['user_id'] = session.get('user_id')
@@ -121,25 +121,28 @@ class QuestionsListAPIView(MethodView):
 create_view = CreateQuestionAPIView.as_view('create_api')
 list_view = QuestionsListAPIView.as_view('list_api')
 
-# Add Rules for API Endpoints
+# Add Rules for API Endpoints, for asking a question, method = POST
 question_blueprint.add_url_rule(
     '/api/v1/questions/',
     view_func=create_view,
     methods=['POST']
 )
 
+# Add Rules for API Endpoints, for deleting a question
 question_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>',
     view_func=create_view,
     methods=['DELETE']
 )
 
+# Add Rules for API Endpoints, for updating a question
 question_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>',
     view_func=create_view,
     methods=['PUT', 'GET']
 )
 
+# Add Rules for API Endpoints, for fetching question
 question_blueprint.add_url_rule(
     '/api/v1/questions/',
     view_func=list_view,
