@@ -113,6 +113,7 @@ answers_blueprint.add_url_rule(
     methods=['PUT', 'DELETE']
 )
 
+#a user to list all answers
 answers_blueprint.add_url_rule(
     '/api/v1/questions/answers',
     view_func=list_view,
