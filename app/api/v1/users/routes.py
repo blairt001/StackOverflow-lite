@@ -32,7 +32,8 @@ class UsersStatsAPIView(MethodView):
 user_view = UsersListAPIView.as_view('user_api')
 stats_view = UsersStatsAPIView.as_view('stats_view')
 
-# Add Rules for API Endpoints
+#Rules for API endpoint, a user should be able to
+#get specific questions once logged in
 users_blueprint.add_url_rule(
     '/api/v1/users/questions',
     view_func=user_view,
