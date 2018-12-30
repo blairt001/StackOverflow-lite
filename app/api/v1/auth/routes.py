@@ -153,7 +153,7 @@ auth_blueprint.add_url_rule(
     view_func=login_view,
     methods=['POST']
 )
-# Adding Rules for API Endpoints, get all users
+# Adding Rules for API Endpoints, get user details using the basic auth token
 auth_blueprint.add_url_rule(
     '/api/v1/auth/users',
     view_func=user_view,
