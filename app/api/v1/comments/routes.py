@@ -29,7 +29,7 @@ class CommentsListAPIView(MethodView):
 # Define the API resources
 comment_view = CommentsListAPIView.as_view('comment_api')
 
-# Add Rules for API Endpoints
+# API endpoint rule to enable a user comment on an answer
 comments_blueprint.add_url_rule(
     '/api/v1/questions/answers/comment/<string:answer_id>',
     view_func=comment_view,
