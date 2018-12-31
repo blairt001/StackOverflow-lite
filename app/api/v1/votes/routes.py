@@ -30,7 +30,7 @@ class VoteAPIView(MethodView):
 # Define the API resources
 vote_view = VoteAPIView.as_view('vote_api')
 
-# Add Rules for API Endpoints
+#Votes API endpoint : user should be able to upvote and downvote
 votes_blueprint.add_url_rule(
     '/api/v1/questions/answers/vote/<string:answer_id>',
     view_func=vote_view,
