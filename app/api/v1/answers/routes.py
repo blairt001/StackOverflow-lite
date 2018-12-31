@@ -69,7 +69,7 @@ class AnswersAPIView(MethodView):
 
 class AnswersListAPIView(MethodView):
     """
-    List API Resource
+    List API Resource, check whether answer is available or not
     """
     def get(self, answer_id=None):
         data = dict()
@@ -94,7 +94,7 @@ class AnswersListAPIView(MethodView):
 create_view = AnswersAPIView.as_view('create_api')
 list_view = AnswersListAPIView.as_view('list_api')
 
-# Add Rules for API Endpoints
+# Add Rules for API Endpoints, post an answer to a specific question
 answers_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>/answers',
     view_func=create_view,
@@ -113,6 +113,7 @@ answers_blueprint.add_url_rule(
     methods=['PUT', 'DELETE']
 )
 
+#a user to list all answers
 answers_blueprint.add_url_rule(
     '/api/v1/questions/answers',
     view_func=list_view,
