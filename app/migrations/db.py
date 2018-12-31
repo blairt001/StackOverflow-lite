@@ -31,7 +31,7 @@ class Database:
         con.close()
     
     #migrate the test database
-    def migrate_test_stacklite(self):
+    def migrate_test_db(self):
         """ Create test database and schema """
         os.environ['APP_SETTINGS'] = 'TESTING'
         con = psycopg2.connect(**self.config)

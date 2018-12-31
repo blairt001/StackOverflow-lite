@@ -11,7 +11,7 @@ runner = Manager(app)
 
 @runner.command
 def test():
-    db.migrate_test_stacklite()
+    db.migrate_test_db()
     pytest.main(['-v', '--cov-report', 'term-missing', '--cov=app'])
     db.drop_test_database()
 
