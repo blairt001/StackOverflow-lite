@@ -21,9 +21,9 @@ class QuestionApiTestCase(BaseTestCase):
         self.assertEqual(response.status_code, 404)
 
     def test_retrieve_question_normal(self):
-        """ Example: question_id '1' """
+        """ Example: question_id '27' """
         response = self.client.get(
-            '/api/v1/questions/1',
+            '/api/v1/questions/27',
             headers={'Authorization': 'JWT ' + self.token}
         )
         self.assertEqual(response.status_code, 200)
@@ -70,7 +70,7 @@ class QuestionApiTestCase(BaseTestCase):
         }
 
         response = self.client.put(
-            '/api/v1/questions/1909090k', json=data,
+            '/api/v1/questions/1808080b', json=data,
             headers={'Authorization': 'JWT ' + self.token}
         )
         self.assertEqual(response.status_code, 401)

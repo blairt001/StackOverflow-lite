@@ -36,7 +36,7 @@ class UtilitiesTestCase(BaseTestCase):
         self.assertEqual(valid, None)
 
     def test_utils_valid_email_normal(self):
-        valid = valid_email('blairt371.dev@gmail.com')
+        valid = valid_email('blairtony1234.@gmail.com')
         self.assertIsNotNone(valid)
 
 

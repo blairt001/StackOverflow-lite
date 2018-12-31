@@ -12,9 +12,9 @@ class BaseTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
         self.data = {
-            'username': 'tony',
-            'email': 'blairt371.dev@gmail.com',
-            'password': '1234',
+            'username': 'tonieza',
+            'email': 'blairtony1234@gmail.com',
+            'password': 'gotsomethingtosmileabout',
             'database': BaseConfig.TEST_DB,
             'test_logout_token': None
         }

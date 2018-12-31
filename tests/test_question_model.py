@@ -86,7 +86,7 @@ class QuestionModelTestCase(BaseTestCase):
 
     def test_question_model_update_normal(self):
         question.question_id = self.data.get('question_id')
-        question.title = 'Hello'
+        question.title = 'Hello There Nigga'
         query = question.update()
         self.assertEqual(query, True)
 
