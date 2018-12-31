@@ -101,6 +101,7 @@ answers_blueprint.add_url_rule(
     methods=['POST']
 )
 
+#user should be able to update an answer as well as accept the answer
 answers_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>/answers/<string:answer_id>',
     view_func=create_view,
