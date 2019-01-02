@@ -21,9 +21,9 @@ class QuestionApiTestCase(BaseTestCase):
         self.assertEqual(response.status_code, 404)
 
     def test_retrieve_question_normal(self):
-        """ Example: question_id '27' """
+        """ Example: question_id '1' """
         response = self.client.get(
-            '/api/v1/questions/27',
+            '/api/v1/questions/1',
             headers={'Authorization': 'JWT ' + self.token}
         )
         self.assertEqual(response.status_code, 200)

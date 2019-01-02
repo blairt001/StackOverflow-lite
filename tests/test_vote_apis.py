@@ -7,7 +7,7 @@ class VoteApiTestCase(BaseTestCase):
     """ Test List votes api """
     def test_votes_api(self):
         response = self.client.post(
-            '/api/v1/questions/answers/vote/7', data=self.data,
+            '/api/v1/questions/answers/vote/1', data=self.data,
             headers={'Authorization': 'JWT ' + self.token}
         )
         assert response.status_code == 400

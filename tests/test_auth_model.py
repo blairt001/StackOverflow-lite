@@ -38,7 +38,7 @@ class AuthModelTestCase(BaseTestCase):
         self.assertEqual(user.filter_by_email(), [])
 
     def test_auth_model_filter_by_email_expected(self):
-        """ Example: email 'blairt371.dev@gmail.com' """
+        """ Example: email 'blairtony2014@gmail.com' """
         user.email = self.data.get('email')
         self.assertEqual(user.filter_by_email()[0].get('email'), self.data.get('email'))
 
@@ -53,9 +53,9 @@ class AuthModelTestCase(BaseTestCase):
         self.assertEqual(user.update(), False)
 
     def test_auth_model_update_expected(self):
-        """ Example: email 'blairt371.dev@gmail.com' """
-        user.email = 'ariga@gmail.com'
-        user.username = 'blairt001'
+        """ Example: email 'blairtony2014@gmail.com' """
+        user.email = 'blairtony2014@gmail.com'
+        user.username = 'tonyman'
         user.user_id = self.user_id
         self.assertEqual(user.update(), True)
 
