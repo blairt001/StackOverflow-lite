@@ -17,7 +17,8 @@ class VoteAPIView(MethodView):
         response = Vote(data).vote()
         if response:
             response_object = {
-                'message': 'Your vote was successful'
+                'message': 'Your vote was successful',
+                'user_id' : session.get('user_id')
             }
             return make_response(jsonify(response_object)), 201
 

@@ -29,7 +29,9 @@ class RegisterAPI(MethodView):
             auth_token = encode_auth_token(user.get('user_id'), user.get('username')).decode()
             response_object = {
                 'message': 'Successfully registered.',
-                'auth_token': auth_token
+                'auth_token': auth_token,
+                'user_id' :user.get('user_id'),
+                'username' : user.get('username')
             }
             return make_response(jsonify(response_object)), 201
         except Exception as e:
@@ -72,7 +74,9 @@ class LoginAPI(MethodView):
                     if auth_token:
                         response_object = {
                             'message': 'Successfully logged in.',
-                            'auth_token': auth_token.decode()
+                            'auth_token': auth_token.decode(),
+                            'user_id' :user.get('user_id'),
+                            'username' : user.get('username')
                         }
                         return make_response(jsonify(response_object)), 200
                 except Exception as e:

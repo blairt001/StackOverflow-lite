@@ -22,7 +22,9 @@ class AnswersAPIView(MethodView):
             }
             return make_response(jsonify(response_object)), 400
         response_object = {
-            'message': 'Update successful'
+            'message': 'Update successful',
+            'user_id' :session.get('user_id'),
+            'username' : session.get('username')
         }
         return make_response(jsonify(response_object)), 200
 

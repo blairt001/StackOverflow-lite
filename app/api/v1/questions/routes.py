@@ -101,7 +101,8 @@ class CreateQuestionAPIView(MethodView):
             }
             return make_response(jsonify(response_object)), 400
         response_object = {
-            'message': 'Question deleted successfully'
+            'message': 'Question deleted successfully',
+            'user_id': session.get('user_id')
         }
         return make_response(jsonify(response_object)), 200
 
