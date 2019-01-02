@@ -6,6 +6,6 @@ class TestUserTestCase(BaseTestCase):
 
     def test_auth_user_validation(self):
         """ Validate user details """
-        data = {"email": "", 'password': ''}
+        data = {"email": "blairtony2014@gmail.com", 'password': 'codingmadefun2019', 'username' : 'tonyman'}
         user = validate_user_details(data)
-        assert user.get('email') == 'Invalid email. Please enter a valid email address'
+        self.assertEqual(user, {})

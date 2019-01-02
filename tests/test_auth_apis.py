@@ -28,7 +28,7 @@ class AuthApiTestCase(BaseTestCase):
 
     def test_auth_signup_unregistered_user(self):
         """  Send correct payload to the database """
-        self.data['email'] = 'blairtony2014' + str(randint(0, 9)) + '@gmail.com'
+        self.data['email'] = 'master' + str(randint(0, 9)) + '@gmail.com'
         response = self.client.post('/api/v1/auth/signup', json=self.data)
         self.data['test_logout_token'] = response.get_json().get('auth_token')
         self.assertEqual(response.status_code, 201)
