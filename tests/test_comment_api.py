@@ -5,7 +5,7 @@ from .base import BaseTestCase
 
 class CommentApiTestCase(BaseTestCase):
 
-    """ Test List comment api """
+    """ List comment api test"""
     def test_comments_api(self):
         response = self.client.post(
             '/api/v1/questions/answers/comment/1', data=self.data,
