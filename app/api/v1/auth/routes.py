@@ -74,9 +74,7 @@ class LoginAPI(MethodView):
                     if auth_token:
                         response_object = {
                             'message': 'Successfully logged in.',
-                            'auth_token': auth_token.decode(),
-                            'user_id' :user.get('user_id'),
-                            'username' : user.get('username')
+                            'auth_token': auth_token.decode()                
                         }
                         return make_response(jsonify(response_object)), 200
                 except Exception as e:
