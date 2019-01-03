@@ -10,13 +10,13 @@ from ..utils import db_config
 class Database:
     def __init__(self):
         self.config = db_config()
-        self.database = self.config.get('database')
+        self.database = 'stacklite_db'
 
     def migrate(self):
         con = psycopg2.connect(**self.config)
         con.autocommit = True
         cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        cur.execute("select * from pg_database where datname = 'stacklite_db'"
+        cur.execute("select * from pg_database where datname = %(database_name)s", {'database_name': self.database})
         databases = cur.fetchall()
         if len(databases) > 0:
             print(" * Database {} exists".format(self.database))
@@ -62,7 +62,7 @@ class Database:
         con = psycopg2.connect(**self.config)
         con.autocommit = True
         cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        cur.execute('DROP DATABASE IF EXISTS {};'.format(BaseConfig.TEST_DB))
+        cur.execute('DROP DATABASE IF EXISTS {};'.format(BaseConfig.TEST_DB, self.config.get('user')))
         con.close()
 
 
