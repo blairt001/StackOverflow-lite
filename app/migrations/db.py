@@ -13,7 +13,9 @@ class Database:
         self.database = self.config.get('database')
 
     def migrate(self):
-        con = psycopg2.connect(**self.config)
+        con = psycopg2.connect(database="test_db",
+                                    user='',
+                                    password='')
         con.autocommit = True
         cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cur.execute("select * from pg_database where datname = %(database_name)s", {'database_name': self.database})
