@@ -12,10 +12,11 @@ services:
 install: 
   - pip install -r requirements.txt
   - pip install coveralls
-  - pip install pytest pytest-cov
 before_script:
-  - psql -c 'CREATE DATABASE test_db;' -U postgres
-  - psql -c 'CREATE DATABASE stacklite_db;' -U postgres
+  - psql -c "CREATE DATABASE test_db;" -U postgres
+  - psql -c "CREATE DATABASE stacklite_db;" -U postgres
+  - psql -c "CREATE USER blairt001 WITH PASSWORD '1234';" -U postgres
+
 # Running tests
 script: 
   - pytest --cov=app -v
