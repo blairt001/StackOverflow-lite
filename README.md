@@ -22,7 +22,7 @@ StackOverflow-lite is a platform where people can ask questions and provide answ
 
 #  Sample Tasks
  
- >  **[Pivot Tracker Board](https://www.pivotaltracker.com/n/projects/2234206)**
+ >  **[Pivotal Tracker Board Stories](https://www.pivotaltracker.com/n/projects/2234206)**
 
 ## StackOverflow-lite Installation Steps
 ```
@@ -93,7 +93,7 @@ POST | `/api/v1/questions/answers/comment/{answer_id}` | Comment on an answer
 [MIT LICENSE](https://github.com/blairt001/StackOverflow-lite/blob/master/LICENSE)
 
 ## Extras
-Andela Cycle-36 Pre-bootcamp Challenge Preparation.
+This was the Andela Cycle-36 Pre-bootcamp Challenge Preparation.
 
 ## Developer
 Tony Blair
