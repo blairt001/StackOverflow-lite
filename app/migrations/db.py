@@ -62,7 +62,7 @@ class Database:
         con = psycopg2.connect(**self.config)
         con.autocommit = True
         cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        cur.execute('DROP DATABASE IF EXISTS {};'.format(BaseConfig.TEST_DB, self.config.get('user')))
+        cur.execute('DROP DATABASE IF EXISTS {};'.format(BaseConfig.TEST_DB))
         con.close()
 
 
