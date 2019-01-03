@@ -1,5 +1,0 @@
-Requirement already satisfied: requests in ./venv/lib/python3.6/site-packages
-Requirement already satisfied: certifi>=2017.4.17 in ./venv/lib/python3.6/site-packages (from requests)
-Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./venv/lib/python3.6/site-packages (from requests)
-Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./venv/lib/python3.6/site-packages (from requests)
-Requirement already satisfied: idna<2.8,>=2.5 in ./venv/lib/python3.6/site-packages (from requests)
