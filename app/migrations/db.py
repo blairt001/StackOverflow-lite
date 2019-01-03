@@ -13,12 +13,10 @@ class Database:
         self.database = self.config.get('database')
 
     def migrate(self):
-        con = psycopg2.connect(database="test_db",
-                                    user='',
-                                    password='')
+        con = psycopg2.connect(**self.config)
         con.autocommit = True
         cur = con.cursor(cursor_factory=psycopg2.extras.DictCursor)
-        cur.execute("select * from pg_database where datname = %(database_name)s", {'database_name': self.database})
+        cur.execute("select * from pg_database where datname = 'stacklite_db'"
         databases = cur.fetchall()
         if len(databases) > 0:
             print(" * Database {} exists".format(self.database))
