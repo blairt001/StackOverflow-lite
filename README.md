@@ -93,7 +93,7 @@ POST | `/api/v1/questions/answers/comment/{answer_id}` | Comment on an answer
 [MIT LICENSE](https://github.com/blairt001/StackOverflow-lite/blob/master/LICENSE)
 
 ## Extras
-This challenge was part at the Andela Cycle-36 pre-bootcamp preparation challenge.
+Andela Cycle-36 Pre-bootcamp Challenge Preparation.
 
 ## Developer
 Tony Blair
