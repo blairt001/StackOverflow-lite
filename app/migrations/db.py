@@ -10,7 +10,7 @@ from ..utils import db_config
 class Database:
     def __init__(self):
         self.config = db_config()
-        self.database = 'stacklite_db'
+        self.database = self.config.get('database')
 
     def migrate(self):
         con = psycopg2.connect(**self.config)
