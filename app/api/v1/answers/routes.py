@@ -104,6 +104,7 @@ answers_blueprint.add_url_rule(
 )
 
 #user should be able to update an answer as well as accept the answer
+#user should also be able to delete a specific answer
 answers_blueprint.add_url_rule(
     '/api/v1/questions/<string:question_id>/answers/<string:answer_id>',
     view_func=create_view,
