@@ -10,7 +10,10 @@ body {
 a {
     text-decoration: none;
 }
-
+.main-body
+{
+    background-color: '#fafafa'
+}
 .main {
     padding: 0
 }
