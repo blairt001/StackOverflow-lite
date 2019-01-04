@@ -4,7 +4,7 @@ Is a platform where people can ask questions and provide answers.
 ## Heroku deployment
 > **[Check it out Here](https://stackoverflowlite-blair-heroku.herokuapp.com/)**
 
-[![Build Status](https://travis-ci.org/blairt001/StackOverflow-lite.svg?branch=develop)](https://travis-ci.org/blairt001/StackOverflow-lite)
+[![Build Status](https://travis-ci.org/blairt001/StackOverflow-lite.svg?branch=master)](https://travis-ci.org/blairt001/StackOverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/blairt001/StackOverflow-lite/badge.svg)](https://coveralls.io/github/blairt001/StackOverflow-lite)
 
 
