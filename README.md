@@ -102,5 +102,8 @@ POST | `/api/v1/questions/answers/comment/{answer_id}` | Comment on an answer
 ## Extras
 This was the Andela Cycle-36 Pre-bootcamp Challenge Preparation.
 
+### Credit
+[Andela Kenya](https://andela.com/)
+
 ## Developer
 Tony Blair
