@@ -103,7 +103,7 @@ POST | `/api/v1/questions/answers/comment/{answer_id}` | Comment on an answer
 This was the Andela Cycle-36 Pre-bootcamp Challenge Preparation.
 
 ### Credit
-[Andela Kenya](https://andela.com/)
+[Andela](https://andela.com/)
 
 ## Developer
 Tony Blair
